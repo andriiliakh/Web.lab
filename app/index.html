@@ -1,10 +1,338 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>
-Title
-</title>
+	<title>Site</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/bootstrap.css" type='text/css' />
+	<link rel="stylesheet" href="css/mystyle.css" type="text/css" media="all" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easydropdown.js"></script>
+	<script src="js/jquery.nicescroll.js"></script>
+	<link rel="stylesheet" href="css/jqvmap.css" media="screen" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<link rel="stylesheet" href="css/calendar.css" type="text/css" />
+	<link rel="stylesheet" href="css/nav.css" type="text/css" media="all"/>
+	<script src="js/jquery.vmap.js" type="text/javascript"></script>
+    <script src="js/jquery.vmap.world.js" type="text/javascript"></script>
+	<script src="js/jquery.vmap.sampledata.js" type="text/javascript"></script>
+	<script src="js/main.js"></script>
 </head>
+
 <body>
-	<p>Hello World!</p>
+	<div class="total-content">
+		<div class="col-md-2 side-bar">
+			<div class="logo text-center">
+				<a href="#"><img src="images/logo.png" alt="" /></a>
+			</div>
+			<div class="navigation">
+				<h3>Navigation</h3>
+				<ul>
+					<li><a href="#"><i class="dash"></i></a></li>
+					<li><a href="#">Dashboard</a></li>
+				</ul>
+				<ul>
+					<li><a href="#"><i class="mail"></i></a></li>
+					<li><a href="#">Emails</a></li>
+				</ul>
+				<ul>
+					<li><a href="#"><i class="cal"></i></a></li>
+					<li><a href="#">Calendar</a></li>
+				</ul>
+				<ul>
+					<li><a href="#"><i class="page"></i></a></li>
+					<li><a href="#">Pages</a></li>
+				</ul>
+			</div>
+			
+			<div class="navigation">
+				<h3>Featured</h3>
+				<ul>
+					<li><a href="#"><i class="chat"></i></a></li>
+					<li><a href="#">Charts</a></li>
+				</ul>
+				<ul>
+					<li><a href="#"><i class="art"></i></a></li>
+					<li><a href="#">Articals</a></li>
+				</ul>
+				<ul>
+					<li><a href="#"><i class="user"></i></a></li>
+					<li><a href="#">Users</a></li>
+				</ul>
+				<ul>
+					<li><a href="#"><i class="fat"></i></a></li>
+					<li><a href="#">Favorites</a></li>
+				</ul>
+				<ul>
+					<li><a href="#"><i class="speed"></i></a></li>
+					<li><a href="#">Speed</a></li>
+				</ul>
+				<ul>
+					<li><a href="#"><i class="setting"></i></a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+			</div>
+			<div class="navigation">
+				<h3>All Others</h3>
+				<ul>
+					<li><a href="#"><i class="rev"></i></a></li>
+					<li><a href="#">Revenue</a></li>
+				</ul>
+				<ul>
+					<li><a href="#"><i class="pic"></i></a></li>
+					<li><a href="#">Pictures</a></li>
+				</ul>
+				<ul>
+					<li><a href="#"><i class="faq"></i></a></li>
+					<li><a href="#">FAQs</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-10 content">
+			<div class="home-strip">
+				<div class="view">
+					<ul>
+						<li><a href="index.html"><i class="refresh"></i></a></li>
+						<li class="messages"><a href="#"><i class="msgs"></i><span class="red">3</span></a></li>
+						<li class="notifications"><a href="#"><i class="bell"></i><span class="blue">7</span></a></li>
+					</ul>
+				</div>
+				<div class="search">
+					<div class="search2">
+					  <form>
+						<input type="submit" value="">
+						<input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}"/>
+					  </form>
+					</div>
+				</div>
+				<div class="member">
+					<ul>
+						<li><a href="#"><i class="men"></i></a></li>
+						<li><a href="#"><p>John</p></a></li>
+						<li><a href="#"><i class="settings"></i></a></li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<p class="home"><a href="#">Home</a> > <strong> Dashboard</strong></p>
+			<div class="list_of_members">
+				<div class="visitors">
+					<p>Total Visitors</p>
+					<h3>56421</h3>
+					<div class="clearfix"></div>
+				</div>
+				<div class="sales">
+					<p>Total Sale</p>
+					<h3>2134</h3>
+					<div class="clearfix"></div>
+				</div>
+				<div class="total-users">
+					<p>Total User</p>
+					<h3>46512</h3>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="stats">
+				<div id="chart1"> </div>
+			</div>
+
+			<div class="total-world">
+				<div class="world-map">
+					<h3>Sales around world</h3>
+					<p><span class="color1"></span>40%<span class="color2"></span>12%<span class="color3"></span>11%<span class="color4"></span>10%<span class="color5"></span>18%</p>
+					<div class="clearfix"></div>
+					<div id="vmap" style="width: 545px; height: 400px;"></div>
+				</div>
+				<div class="site-report">
+					<h3>Site Report</h3>
+					<div class="skills-top">
+						<h5>Sales</h5>
+						<h4 id="ajax1"></h4>
+						<div class="clearfix"></div>
+						<div class="skills">
+							<div class="skill" style="width:45%"></div>
+						</div>
+					</div>
+					<div class="skills-top">
+						<h5>Revenue</h5>
+						<h4 id="ajax2"></h4>
+						<div class="clearfix"></div>
+						<div class="skills">
+							<div class="skill1" style="width:68%"></div>
+						</div>
+					</div>
+					<div class="skills-top">
+						<h5>New Orders</h5>
+						<h4 id="ajax3"></h4>
+						<div class="clearfix"></div>
+						<div class="skills">
+							<div class="skill2" style="width:89%"></div>
+						</div>
+					</div>
+					<p>It is a long established fact that a re-ader will be distracted by the readable content of a page when looking at its layout.</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			
+			<div>
+				<div class="chart3"> <img src="images/imgchr.png" height="365px" style="width=30%"> </div>
+				<div id="chart2"> </div>
+				<div class="clearfix"></div>
+			</div>
+			
+			<div class="calenders">
+				<div class="calender-left">
+					<h3>Contact form</h3>
+						<form>
+							<input type="text" class="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">
+							<input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}">
+							<textarea value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+							<input type="submit" value="SEND"/>
+						</form>
+				</div>
+				<div class="calender-right">
+					<div class="calendar-wrapper"></div>
+					<script src="js/calendar.js"></script>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="cd-tabs">
+			<nav>
+				<ul class="cd-tabs-navigation">
+					<li><a data-content="fashion"  href="#0">Latest Comments <i> </i></a></li>
+					<li><a data-content="cinema" href="#0" class="selected fashion1">Latest Articles<i> </i></a></li>
+					<li><a data-content="television" href="#0" class="fashion2">Newest Users<i> </i></a></li>
+					<div class="clearfix"></div>
+				</ul> 
+			</nav>
+	<ul class="cd-tabs-content">
+		<li data-content="fashion" >
+		<div class="top-men">
+			<div class="men">
+				<div class="grid-men">
+					<a href="#"><img src="images/person2.jpg" class="img-responsive" alt=""> </a>
+				</div>
+				<div class="men-grid">
+					<h6>on <a href="#">Fashion News</a> / by <a href="#">Jolia</a></h6>
+					<span>12-11-2014</span>
+					<p class="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.      </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="men">
+				<div class="grid-men">
+					<a href="#"><img src="images/person3.jpg" class="img-responsive" alt=""> </a>
+				</div>
+				<div class="men-grid">
+					<h6>on <a href="#">Technoloy News </a>/ by <a href="#">Deo</a></h6>
+					<span>12-11-2014</span>
+					<p class="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.      </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="men">
+				<div class="grid-men">
+					<a href="#"><img src="images/person1.jpg" class="img-responsive" alt=""> </a>
+				</div>
+				<div class="men-grid">
+					<h6>on<a href="#"> Fashion News</a> / by <a href="#">Jolia</a></h6>
+					<span>12-11-2014</span>
+					<p class="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.      </p>
+				</div>
+			<div class="clearfix"></div>
+			</div>
+		</div>
+</li>
+<li data-content="cinema" class="selected">
+		<div class="top-men">
+			<div class="men">
+				<div class="grid-men">
+					<a href="#"><img src="images/person2.jpg" class="img-responsive" alt=""> </a>
+				</div>
+				<div class="men-grid">
+					<h6>on <a href="#"> Fashion News </a>/ by <a href="#">Jolia</a></h6>
+					<span>12-11-2014</span>
+					<p class="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.      </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="men">
+				<div class="grid-men">
+					<a href="#"><img src="images/person3.jpg" class="img-responsive" alt=""> </a>
+				</div>
+				<div class="men-grid">
+					<h6>on <a href="#">Technoloy News</a> / by <a href="#">Deo</a></h6>
+					<span>12-11-2014</span>
+					<p class="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.      </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="men">
+				<div class="grid-men">
+					<a href="#"><img src="images/person1.jpg" class="img-responsive" alt=""> </a>
+				</div>
+				<div class="men-grid">
+					<h6>on <a href="#"> Fashion News </a>/ by <a href="#">Jolia</a></h6>
+					<span>12-11-2014</span>
+					<p class="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.      </p>
+				</div>
+			<div class="clearfix"></div>
+			</div>
+		</div>
+</li>
+<li data-content="television" >
+		<div class="top-men">
+			<div class="men">
+				<div class="grid-men">
+					<a href="#"><img src="images/person2.jpg" class="img-responsive" alt=""> </a>
+				</div>
+				<div class="men-grid">
+					<h6>on <a href="#">Fashion News</a> / by <a href="#">Jolia</a></h6>
+					<span>12-11-2014</span>
+					<p class="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.      </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="men">
+				<div class="grid-men">
+					<a href="#"><img src="images/person3.jpg" class="img-responsive" alt=""> </a>
+				</div>
+				<div class="men-grid">
+					<h6>on <a href="#">Technoloy News</a> / by <a href="#">Deo</a></h6>
+					<span>12-11-2014</span>
+					<p class="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.      </p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="men">
+				<div class="grid-men">
+					<a href="#"><img src="images/person1.jpg" class="img-responsive" alt=""> </a>
+				</div>
+				<div class="men-grid">
+					<h6>on <a href="#">Fashion News </a>/ by <a href="#">Jolia</a></h6>
+					<span>12-11-2014</span>
+					<p class="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.      </p>
+				</div>
+			<div class="clearfix"></div>
+			</div>
+		</div>
+</li>
+<div class="clearfix"></div>
+	</ul> 
+</div> 
+
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="footer">
+		<div class="copyright text-center">
+			<p>&copy; Copy Rights 2014. CreativeCrunk</p>
+		</div>		
+	</div>
 </body>
 </html>
